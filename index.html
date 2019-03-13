@@ -30,7 +30,7 @@
       
         <meta name="lang:clipboard.copied" content="Copied to clipboard">
       
-        <meta name="lang:search.language" content="en">
+        <meta name="lang:search.language" content="jp">
       
         <meta name="lang:search.pipeline.stopwords" content="True">
       
@@ -112,6 +112,12 @@
     
     <link rel="stylesheet" href="https://fonts.loli.net/icon?family=Material+Icons">
     
+      <link rel="manifest" href="manifest.webmanifest">
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ah@1.2.0/han.min.css">
+    
+      <link rel="stylesheet" href="_static/css/extra.css?v=11">
     
     
   </head>
@@ -266,6 +272,19 @@
   
 
       
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="graph/图论" title="图论" class="md-tabs__link">
+          图论
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -370,6 +389,54 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      图论
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        图论
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="graph/图论" title="图论基本内容" class="md-nav__link">
+      图论基本内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="graph/三元环计数/" title="三元环计数" class="md-nav__link">
+      三元环计数
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -400,7 +467,7 @@
                   <a href="https://github.com/changjunoi/Wiki/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                 
+                 <blockquote class="page-time"></blockquote>
                 <h1 id="welcome-to-mwiki">WelCome To MWiki<a class="headerlink" href="#welcome-to-mwiki" title="Permanent link">&para;</a></h1>
 <p>欢迎来到MWiki,不断完善ing!</p>
                 
@@ -416,9 +483,31 @@
   <span><i class="md-icon">build</i>本页面最近更新：</span><span class="facts_modified"></span>，<a class="edit_history">更新历史</a><br>
   <span><i class="md-icon">edit</i>发现错误？想一起完善？ <a href="https://github.com/changjunoi/Wiki/edit/master/docs/index.md" title="Edit this page" class="page_edit_url">在 GitHub 上编辑此页！</a></span><br>
   <span><i class="md-icon">people</i>本页面贡献者：</span><span class="page_contributors"></span><br>
-  <span><i class="md-icon">copyright</i>本页面的全部内容在 <strong></strong> 协议之条款下提供，附加条款亦可能应用</span>
+  <span><i class="md-icon">copyright</i>本页面的全部内容在 <strong><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a></strong> 协议之条款下提供，附加条款亦可能应用</span>
 </blockquote>
 <!-- Comments Integration -->
+
+
+<h2 id="__comments" data-no-instant>Comments</h2>
+<form id="gitalk-form" onsubmit="return false;" data-no-instant>
+<div id="gitalk-container" data-no-instant>
+</div>
+</form>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    id: 'Getting Starting',
+    owner: 'Ir1d',
+    repo: 'gitment',
+    admin: ['Ir1d'],
+    clientID: 'd6a911c8fba0194626d4',
+    clientSecret: '867ec7e13cc99b420bd147cbb62d5cfec271ba81',
+    distractionFreeMode: false,
+    pagerDirection: 'first'
+  })
+  gitalk.render('gitalk-container')
+</script>
 
               
             </article>
@@ -514,7 +603,7 @@
           Material for MkDocs</a>
       </div>
         
-        <span style="float:right" class="build_date_utc"><a href="https://github.com/24OI/OI-wiki">最近更新：, 2019-03-13</a></span>
+        <span style="float:right" class="build_date_utc"><a href="https://github.com/changjunoi/Wiki">最近更新：, 2019-03-13</a></span>
         <script>
           console.log(`%c OI Wiki %c  %c`,"background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff","background:#41b883 ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff","background:transparent");
           console.log('少年，恭喜你囍提彩蛋，linhua.org 将是下一代编程竞赛训练平台，如果您对此感兴趣，欢迎访问 https://join-us.linhua.org');
@@ -531,6 +620,12 @@
     
       <script src="https://cdn.jsdelivr.net/npm/ah@1.4.0/application.bce3478d.js"></script>
       <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/Han/3.3.0/han.min.js"></script>
+      
+        <script src="_static/js/extra.js?v=10"></script>
+      
+        <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
     

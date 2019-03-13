@@ -20,6 +20,8 @@
         <meta name="description" content="changjunoi Wiki Team">
       
       
+        <link rel="canonical" href="https://changjunoi.github.io/wiki/graph/图论介绍/">
+      
       
         <meta name="author" content="MLEAutoMaton">
       
@@ -42,14 +44,51 @@
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
-      <link rel="shortcut icon" href="/wiki/.">
+      <link rel="shortcut icon" href="../..">
       <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
     
     
-      
-        <title>MWiki</title>
-      
-    
+<!--<meta charset="utf-8">-->
+<!--<meta name="theme-color" content="<%= theme_color %>">-->
+
+<!--ANDROID-->
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="48x48" href="/favicon.ico">
+<link rel="icon" sizes="192x192" href="/favicon.ico">
+
+<!--IOS-->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- <meta name="apple-mobile-web-app-status-bar-style" content="<%= theme_color %>"> -->
+<meta name="apple-mobile-web-app-title" content="OI Wiki">
+<link rel="apple-touch-icon" href="/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="/favicon.ico">
+<link rel="apple-touch-startup-image" href="/favicon.ico">
+
+<!--WINDOWS-->
+<meta name="msapplication-TileImage" content="/favicon.ico">
+<!-- <meta name="msapplication-TileColor" content="<%= theme_color %>"> -->
+<meta name="msapplication-square310x310logo" content="/favicon.ico">
+<!-- <meta name="msapplication-navbutton-color" content="<%= theme_color %>"> -->
+
+<!-- WEB -->
+<!--<link rel="shortcut icon" href="<%= favicon %>" type="image/x-icon">-->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<script>
+  'use strict';
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+      .then(function (reg) {
+        console.log('Registration succeeded. Scope is ' + reg.scope);
+      }).catch(function (error) {
+        console.log('Registration failed with ' + error);
+      });
+  }
+</script>
+
+<title>图论介绍 - MWiki</title>
+
+
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ah@1.4.0/application.572ca0f0.css">
       
@@ -73,12 +112,12 @@
     
     <link rel="stylesheet" href="https://fonts.loli.net/icon?family=Material+Icons">
     
-      <link rel="manifest" href="/wiki/manifest.webmanifest">
+      <link rel="manifest" href="../../manifest.webmanifest">
     
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ah@1.2.0/han.min.css">
     
-      <link rel="stylesheet" href="/wiki/_static/css/extra.css?v=11">
+      <link rel="stylesheet" href="../../_static/css/extra.css?v=11">
     
     
   </head>
@@ -138,7 +177,7 @@
                 MWiki
               </span>
               <span class="md-header-nav__topic">
-                
+                图论介绍
               </span>
             
           
@@ -219,7 +258,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/wiki/." title="简介" class="md-tabs__link">
+        <a href="../.." title="简介" class="md-tabs__link">
           简介
         </a>
       
@@ -232,7 +271,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="/wiki/graph/图论" title="图论" class="md-tabs__link">
+        <a href="../图论" title="图论" class="md-tabs__link">
           图论
         </a>
       
@@ -310,7 +349,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/wiki/." title="Getting Starting" class="md-nav__link">
+    <a href="../.." title="Getting Starting" class="md-nav__link">
       Getting Starting
     </a>
   </li>
@@ -322,7 +361,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/wiki/Start/about/" title="关于本项目" class="md-nav__link">
+    <a href="../../Start/about/" title="关于本项目" class="md-nav__link">
       关于本项目
     </a>
   </li>
@@ -358,7 +397,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/wiki/graph/图论" title="图论基本内容" class="md-nav__link">
+    <a href="../图论" title="图论基本内容" class="md-nav__link">
       图论基本内容
     </a>
   </li>
@@ -370,7 +409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/wiki/graph/三元环计数/" title="三元环计数" class="md-nav__link">
+    <a href="../三元环计数/" title="三元环计数" class="md-nav__link">
       三元环计数
     </a>
   </li>
@@ -392,8 +431,18 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                  <a href="https://github.com/changjunoi/Wiki/edit/master/docs/graph/图论介绍.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>图论介绍</h1>
+                
+                 <blockquote class="page-time"></blockquote>
+                
+                
+                  
+                
+              
               
                 <!-- Set from config but allow override -->
  
@@ -401,7 +450,7 @@
 
 <hr><blockquote class="page-copyright">
   <span><i class="md-icon">build</i>本页面最近更新：</span><span class="facts_modified"></span>，<a class="edit_history">更新历史</a><br>
-  <span><i class="md-icon">edit</i>发现错误？想一起完善？ <a href="" title="Edit this page" class="page_edit_url">在 GitHub 上编辑此页！</a></span><br>
+  <span><i class="md-icon">edit</i>发现错误？想一起完善？ <a href="https://github.com/changjunoi/Wiki/edit/master/docs/graph/图论介绍.md" title="Edit this page" class="page_edit_url">在 GitHub 上编辑此页！</a></span><br>
   <span><i class="md-icon">people</i>本页面贡献者：</span><span class="page_contributors"></span><br>
   <span><i class="md-icon">copyright</i>本页面的全部内容在 <strong><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh">CC BY-SA 4.0</a> 和 <a href="https://github.com/zTrix/sata-license">SATA</a></strong> 协议之条款下提供，附加条款亦可能应用</span>
 </blockquote>
@@ -417,7 +466,7 @@
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
   const gitalk = new Gitalk({
-    id: '404',
+    id: '图论介绍',
     owner: 'Ir1d',
     repo: 'gitment',
     admin: ['Ir1d'],
@@ -511,11 +560,11 @@
     </div>
     
       <script src="https://cdn.jsdelivr.net/npm/ah@1.4.0/application.bce3478d.js"></script>
-      <script>app.initialize({version:"1.0.4",url:{base:"/wiki"}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
         <script src="https://cdnjs.loli.net/ajax/libs/Han/3.3.0/han.min.js"></script>
       
-        <script src="/wiki/_static/js/extra.js?v=10"></script>
+        <script src="../../_static/js/extra.js?v=10"></script>
       
         <script src="https://cdnjs.loli.net/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
