@@ -86,7 +86,7 @@
   }
 </script>
 
-<title>图论介绍 - MWiki</title>
+<title>图论基本内容 - MWiki</title>
 
 
     
@@ -177,7 +177,7 @@
                 MWiki
               </span>
               <span class="md-header-nav__topic">
-                图论介绍
+                图论基本内容
               </span>
             
           
@@ -249,7 +249,9 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -271,7 +273,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../图论" title="图论" class="md-tabs__link">
+        <a href="./" title="图论" class="md-tabs__link md-tabs__link--active">
           图论
         </a>
       
@@ -376,10 +378,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       图论
@@ -395,11 +399,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../图论" title="图论基本内容" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="图论基本内容" class="md-nav__link md-nav__link--active">
       图论基本内容
     </a>
+    
   </li>
 
         
@@ -435,7 +446,7 @@
                   <a href="https://github.com/changjunoi/Wiki/edit/master/docs/graph/图论介绍.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>图论介绍</h1>
+                  <h1>图论基本内容</h1>
                 
                  <blockquote class="page-time"></blockquote>
                 
@@ -466,7 +477,7 @@
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 <script>
   const gitalk = new Gitalk({
-    id: '图论介绍',
+    id: '图论基本内容',
     owner: 'Ir1d',
     repo: 'gitment',
     admin: ['Ir1d'],
@@ -524,6 +535,51 @@
 <footer class="md-footer">
 
   <!-- Link to previous and/or next page -->
+  
+  <div class="md-footer-nav">
+    <nav class="md-footer-nav__inner md-grid">
+
+      <!-- Link to previous page -->
+      
+      <a href="../../Start/about/" title="关于本项目" class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+        rel="prev">
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <i class="md-icon md-icon--arrow-back
+                    md-footer-nav__button"></i>
+        </div>
+        <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+          <span class="md-flex__ellipsis">
+            <span class="md-footer-nav__direction">
+              Previous
+            </span>
+            关于本项目
+          </span>
+        </div>
+      </a>
+      
+
+      <!-- Link to next page -->
+      
+      <a href="../三元环计数/" title="三元环计数" class="md-flex md-footer-nav__link md-footer-nav__link--next"
+        rel="next">
+        <div class="md-flex__cell md-flex__cell--stretch
+                  md-footer-nav__title">
+          <span class="md-flex__ellipsis">
+            <span class="md-footer-nav__direction">
+              Next
+            </span>
+            三元环计数
+          </span>
+        </div>
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <i class="md-icon md-icon--arrow-forward
+                    md-footer-nav__button"></i>
+        </div>
+      </a>
+      
+    </nav>
+  </div>
   
 
   <!-- Further information -->
