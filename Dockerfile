@@ -1,22 +1,51 @@
-# Set the base image to Ubuntu16.04
-FROM ubuntu:16.04
+# Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
 
-MAINTAINER frank-xjh "frank99-xu@outlook.com"
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
 
-WORKDIR /
-RUN apt-get update \
-    && apt-get install -y git wget curl python3 python3-pip gcc g++ make \
-	&& curl https://bootstrap.pypa.io/get-pip.py | python3 \
-    && curl -sL https://deb.nodesource.com/setup_10.x | bash - \
-    && apt-get install -y nodejs
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
 
-RUN git clone https://github.com/24OI/OI-wiki.git --depth=1 \
-    && cd OI-wiki \
-    && pip install -U -r requirements.txt \
-    && npm install
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
 
-ADD .bashrc /root/
+FROM jfloff/alpine-python:3.6-slim
+MAINTAINER Martin Donath <martin.donath@squidfunk.com>
 
-WORKDIR /OI-wiki
+# Set build directory
+WORKDIR /tmp
+
+# Copy files necessary for build
+COPY material material
+COPY MANIFEST.in MANIFEST.in
+COPY package.json package.json
+COPY requirements.txt requirements.txt
+COPY setup.py setup.py
+
+# Perform build and cleanup artifacts
+RUN \
+  apk add --no-cache \
+    git \
+    git-fast-import \
+    openssh \
+  && python setup.py install 2>/dev/null \
+  && rm -rf /tmp/*
+
+# Set working directory
+WORKDIR /docs
+
+# Expose MkDocs development server port
 EXPOSE 8000
-CMD ["/bin/bash"]
+
+# Start development server by default
+ENTRYPOINT ["mkdocs"]
+CMD ["serve", "--dev-addr=0.0.0.0:8000"]
