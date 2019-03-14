@@ -2,8 +2,6 @@
 
 ![Owner](https://img.shields.io/badge/Maintainer-MLEAutoMaton-9cf.svg)
 
-![Owner](https://img.shields.io/badge/Maintainer-ZCDHJ-blue.svg)
-
 ![Owner](https://img.shields.io/badge/Maintainer-water--mi-blueviolet.svg)
 
 
